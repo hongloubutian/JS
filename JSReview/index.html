@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS复习 </title>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<div id="div1" onclick="this.innerHTML='逗你玩！'"></div>
+<script type="text/javascript">
+    //AlertMsg();
+    //DocmentWriteMsg();
+    //document.getElementById('div1').innerHTML='test test';
+   // var tagName=document.getElementsByTagName('h1');
+   // alert(tagName);
+    var newDate=new Date();
+    var newDay=newDate.getDate();
+    var newYear=newDate.getFullYear();
+    var newMonth=newDate.getMonth();
+
+    var newHour=newDate.getHours();
+    var newMinute=newDate.getMinutes();
+
+    var timeStr=newYear+"年"+newMonth+"月"+newDay+"日 "+newHour+":"+newMinute
+    //document.getElementById('div1').innerHTML=timeStr;
+
+    var div1Name=document.getElementById('div1');
+    var para=document.createElement('p');
+    var node=document.createTextNode(timeStr);
+    para.appendChild(node);
+
+    div1Name.appendChild(para);
+</script>
+</body>
+</html>
